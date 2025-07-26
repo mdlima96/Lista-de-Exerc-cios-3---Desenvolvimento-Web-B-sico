@@ -1,0 +1,109 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header, Main, Footer */
+header, main, footer {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+}
+
+main {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+}
+
+/* h2 estilo */
+h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+/* Classe destaque */
+.destaque {
+  font-style: italic;
+  background-color: #f0f0f0;
+}
+
+/* ID importante */
+#importante {
+  border-top: 4px solid red;
+}
+
+/* CSS Item 6 do ex */
+
+.galeria-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.galeria div {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 7. Menu Hamburger */
+
+.menu-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .menu-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.open .menu-links {
+    display: flex;
+  }
+}
